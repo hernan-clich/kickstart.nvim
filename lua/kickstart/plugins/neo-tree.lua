@@ -11,10 +11,21 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '\\', ':Neotree reveal right<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
     filesystem = {
+      filtered_items = {
+        visible = true,
+        show_hidden_count = true,
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        never_show = {
+          '.git',
+          '.DS_Store',
+          'thumbs.db',
+        },
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
