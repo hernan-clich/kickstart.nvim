@@ -1,9 +1,8 @@
 return {
-  'loctvl842/monokai-pro.nvim',
-  opts = {
-    filter = 'machine',
-  },
-  init = function()
-    vim.cmd 'colorscheme monokai-pro'
-  end,
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    lazy = false,
+    config = function()
+        vim.cmd([[colorscheme gruvbox]])
+    end
 }
